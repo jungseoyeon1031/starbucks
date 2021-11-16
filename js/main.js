@@ -1,24 +1,3 @@
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-// 서치 요소에 이벤트 추가
-// 서치 클래스를 클릭하면 함수 실행, 함수 내용 검색 요소의 포커스
-searchEl.addEventListener('click', function () {
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function () {
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute ('placeholder', '통합검색');
-  // html 속성을 지정하는 메소드 (속성이름, 실제 들어갈 이름)
-});
-
-searchInputEl.addEventListener('blur', function () {
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute ('placeholder', '');
-  // 요소에 블러 처리 search 부분에 포커스 취소
-});
-
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
 // -> 선택자 대체용
@@ -159,7 +138,3 @@ spyEls.forEach(function (spyEl) {
   .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
   .addTo(new ScrollMagic.Controller()) // 컨트롤러에 장면을 할당(필수!)
 });
-
-
-const thisYear = document.querySelector('.this-year')
-thisYear.textContent = new Date().getFullYear(); // 2021년 숫자가 지정한 클래스에 글자로 삽입
